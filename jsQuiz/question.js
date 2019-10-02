@@ -4,6 +4,10 @@ class Question {
     this.text = text;
     this.choices = choices;
     this.answer = answer;
+
+  isCorrectAnswer(choice){
+    return this.answer === choice;
+  }
 }
 }
 
@@ -33,10 +37,6 @@ class Quiz {
         }
     
     this.questionIndex++;
-  }
-
-  isCorrectAnswer(choice){
-    return this.answer === choice;
   }
 
   isEnded() {
