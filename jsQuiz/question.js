@@ -39,6 +39,11 @@ class Quiz {
     return this.answer === choice;
   }
 
+  isEnded() {
+  return this.questionIndex === this.questions.length;
+}
+
+
 }
 
 function populate() {
