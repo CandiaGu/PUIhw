@@ -25,52 +25,58 @@ class Quiz {
   getQuestion() {
 
     return this.questions[this.questionIndex];
+  } 
+
+  guess(answer) {
+    if(this.getQuestion().isCorrectAnswer(answer)) {
+     this.score++;
+        }
+    
+    this.questionIndex++;
   }
 
-  function populate() {
-    if(quiz.isEnded()) {
-        showScores();
-    }
-    else {
-   
-        var element = document.getElementById("question");
-        element.innerHTML = quiz.getQuestion().text;
-   
-        var choices = quiz.getQuestion().choices;
-        for(var i = 0; i < choices.length; i++) {
-            var element = document.getElementById("choice" + i);
-            element.innerHTML = choices[i];
-            guess("btn" + i, choices[i]);
-        }
-   
-    }
-  };
+  isCorrectAnswer(choice){
+    return this.answer === choice;
+  }
+
+}
+
+function populate() {
+  if(quiz.isEnded()) {
+      showScores();
+  }
+  else {
+ 
+      var element = document.getElementById("question");
+      element.innerHTML = quiz.getQuestion().text;
+ 
+      var choices = quiz.getQuestion().choices;
+      for(var i = 0; i < choices.length; i++) {
+          var element = document.getElementById("choice" + i);
+          element.innerHTML = choices[i];
+          guess("btn" + i, choices[i]);
+      }
+ 
+  }
+};
 
 
-  function guess(id, guess) {
+function guess(id, guess) {
     var button = document.getElementById(id);
     button.onclick = function() {
      quiz.guess(guess);
      populate();
     }
-  };
+};
 
-  function showScores() {
+function showScores() {
   var gameOverHTML = "<h1>Result</h1>";
   gameOverHTML += "<h2 id='score'> Your scores: " + quiz.score + "</h2>";
   var element = document.getElementById("quiz");
   element.innerHTML = gameOverHTML;
-  };
-
-
-
-}
-
+};
 
 
 var quiz = new Quiz(questions);
 populate();
-
-
-
 
