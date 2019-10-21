@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>fluff stuff</title>
+	<meta charset="UTF-8">
+	<!-- styles -->
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<!-- fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Montserrat%7CPPlayfair+Display&display=swap" rel="stylesheet">
+	<!-- javascript -->
+	<script src="script.js" type="text/javascript"></script>
+</head>
+<body onload="onLoad()">
+	<header>
+		<a href="index.html">fluff stuff.</a>
+		<div class="header-right">
+			<a href="products.html">products</a>
+			<a href="index.html#our-mission">our mission</a>
+			<a href="shoppingcart.html"><img src="img/cart.png" alt="cart"><span class='badge badge-warning' id='cartCount'>0</span></a>
+
+		</div>
+
+	</header>
+
+	<!--content-->
+	<div class="product-details">
+		
+		<div class="container">
+			<div class="grid-item">
+				<h5 style = "margin:0; margin-bottom:10px;">
+					Products > Bed Pillow
+				</h5>
+				<div class="product-pics" style="height: 50px;background-color:grey; width: auto;">
+					<img id="productImage" src="img/bedpillowyellow.jpg" alt="bedpillow">
+				</div>
+			</div>
+			<div>
+				<h3>Bed Pillow</h3>
+				<h4>$XX.XX</h4>
+				<p>
+					A comfortable pillow to place on your bed.
+				</p>
+				<h4>color: <i id="colorName">after school special</i></h4>
+				<div class="radio-toolbar options">
+					<div class="color1">
+						<input type="radio" id="radioYellow" name="radioColor" value="after school special" onclick="updateColor()">
+						<label for="radioYellow"></label>
+					</div>
+
+					<div class="color2">
+						<input type="radio" id="radioBlue" name="radioColor" value="morning haze" onclick="updateColor()">
+						<label for="radioBlue"></label>
+					</div>
+
+					<div class="color3">
+						<input type="radio" id="radioCyan" name="radioColor" value="cozy denim" onclick="updateColor()">
+						<label for="radioCyan"></label> 
+					</div>
+
+					<div class="color4">
+						<input type="radio" id="radioRed" name="radioColor" value="rainy day" onclick="updateColor()">
+						<label for="radioRed"></label> 
+					</div>
+				</div>
+
+				<h4>stuffing: <i id="stuffingName">duck down</i> <a href="#">(?)</a></h4>
+				<div class="radio-toolbar options">
+					<div class="stuffing1">
+						<input type="radio" id="radioDown" name="radioStuffing" value="duck down" onclick="updateStuffing()">
+						<label for="radioDown"></label>
+					</div>
+
+					<div class="stuffing2">
+						<input type="radio" id="radioPolyBlend" name="radioStuffing" value="hypoallergenic poly-blend" onclick="updateStuffing()">
+						<label for="radioPolyBlend"></label>
+					</div>
+
+					<div class="stuffing3">
+						<input type="radio" id="radioFoam" name="radioStuffing" value="memory foam" onclick="updateStuffing()">
+						<label for="radioFoam"></label> 
+					</div>
+				</div>
+
+				<h4>qty: <input id = "qtyNum" type="number" min="1" max="99"></h4>
+				<br/><br/>
+
+				<input type="button" onclick="addItemToCart()" value="ADD TO CART"></input>
+
+			</div>
+		</div>
+	</div>
+
+	<!--footer-->
+	<footer>
+		<img src="img/socialmedia.png" alt="socialmedia">
+		<h4>© 2019 fluffstuff</h4>
+	</footer>
+</body>
+</html>
