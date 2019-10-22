@@ -47,9 +47,11 @@ function loadBadge(){
 		cartCountInt = 0;
 	}
 	else{
-		console.log(localStorage.getItem("cartCount"));
-		document.getElementById('cartCount').innerHTML = localStorage.getItem("cartCount");
-		document.getElementById('cartCount').style.visibility = "visible";
+		if(cartCount!=0){
+			console.log(localStorage.getItem("cartCount"));
+			document.getElementById('cartCount').innerHTML = localStorage.getItem("cartCount");
+			document.getElementById('cartCount').style.visibility = "visible";
+		}
 	}
 
 
