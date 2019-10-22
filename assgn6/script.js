@@ -3,7 +3,9 @@
 
 function addItemToCart() {
 	var numItems = parseInt(document.getElementById("qtyNum").value);
-	updateBadge(numItems);
+	console.log("adding items");
+	console.log("numItems=" + numItems);
+	if(numItems!=null) updateBadge(numItems);
   // to do later
 }
 
@@ -42,7 +44,6 @@ function loadBadge(){
 
 	if (localStorage.getItem("cartCount")==null){
 		localStorage.setItem("cartCount","0");
-		console.log("setting cartCount to " + localStorage.getItem("cartCount"));
 		cartCountInt = 0;
 	}
 	else{
@@ -67,8 +68,6 @@ function updateBadge(numNewItems){
 
 /*** Document Load ****/
 function onLoad () {
-
-	localStorage.removeItem("cartCount");
 
 	loadBadge();
 
