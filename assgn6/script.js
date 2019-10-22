@@ -44,10 +44,9 @@ function loadBadge(){
 
 	if (localStorage.getItem("cartCount")==null){
 		localStorage.setItem("cartCount","0");
-		cartCountInt = 0;
 	}
 	else{
-		if(cartCount!=0){
+		if(parseInt(localStorage.getItem("cartCount"))!=0){
 			console.log(localStorage.getItem("cartCount"));
 			document.getElementById('cartCount').innerHTML = localStorage.getItem("cartCount");
 			document.getElementById('cartCount').style.visibility = "visible";
@@ -70,6 +69,8 @@ function updateBadge(numNewItems){
 
 /*** Document Load ****/
 function onLoad () {
+
+	// localStorage.removeItem("cartCount");
 
 	loadBadge();
 
