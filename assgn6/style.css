@@ -143,7 +143,8 @@ header .header-right {
 }
 
 .couch-pillow{
-    background-image: url("img/couchpillow.jpg");
+    background-image: url("img/couchpillowyellow.jpg");
+    width: -webkit-fill-available;
 }
 
 .bed-pillow{
@@ -152,11 +153,13 @@ header .header-right {
 }
 
 .round-pillow{
-    background-image: url("img/roundpillow.jpg");
+    background-image: url("img/roundpillowyellow.jpg");
+    width: -webkit-fill-available;
 }
 
 .floor-pillow{
-    background-image: url("img/floorpillow.jpg");
+    background-image: url("img/floorpillowyellow.jpg");
+    width: -webkit-fill-available;
 }
 
 /*********** PRODUCTS-DETAILS ************/

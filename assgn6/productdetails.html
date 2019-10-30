@@ -10,7 +10,7 @@
 	<!-- javascript -->
 	<script src="script.js"></script>
 </head>
-<body onload="onLoad()">
+<body onload="onLoadProductDetailsPage()">
 	<header>
 		<a href="index.html">fluff stuff.</a>
 		<div class="header-right">
@@ -28,16 +28,16 @@
 		<div class="container">
 			<div class="grid-item">
 				<h5 style = "margin:0; margin-bottom:10px;">
-					Products > Bed Pillow
+					Products > <span id="productNav">Bed Pillow</span>
 				</h5>
 				<div class="product-pics" style="height: 50px;background-color:grey; width: auto;">
-					<img id="productImage" src="img/bedpillowyellow.jpg" alt="bedpillow">
+					<img id="productImage" src="img/bedpillowyellow.jpg" alt="pillowpic">
 				</div>
 			</div>
 			<div>
-				<h3>Bed Pillow</h3>
+				<h3 id ="productName">Bed Pillow</h3>
 				<h4>$XX.XX</h4>
-				<p>
+				<p id="productDescription">
 					A comfortable pillow to place on your bed.
 				</p>
 				<h4>color: <i id="colorName">after school special</i></h4>

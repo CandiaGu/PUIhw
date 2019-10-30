@@ -11,7 +11,7 @@
 	<script src="script.js"></script>
 </head>
 
-<body onload="onLoad()">
+<body onload="onLoadShoppingCart()">
 	<!--header-->
 	<header>
 		<a href="index.html">fluff stuff.</a>
@@ -32,27 +32,34 @@
 
 
 		<div id="shopping-cart-items">
-			<div class="container">
-				<div class="grid-item">
-					<div class="product-pics" style="height: 50px;background-color:grey; width: auto;">
-						<img src="img/bedpillowblue.jpg" alt="bedpillow">
-					</div>
-				</div>
-				<div class="cart-item-description">
-					<h3>Bed Pillow</h3>
-
-					<p>color: <i>after school special</i></p>
-					<p>stuffing: <i>duck down</i></p>
-
-				</div>
-				<div>
-					qty: <input type="number" min="1" max="99" text="1" placeholder="1">
-				</div>
-				<div>
-					$XX.XX
-				</div>
+			<div id="emptyBag" style="visibility: hidden">
+				<h3>
+					Your bag is empty!
+				</h3>
 			</div>
-			<div class="container">
+			<div id="notEmptyBag">
+<!-- 				<div class="container">
+					<div class="grid-item">
+						<div class="product-pics" style="height: 50px;background-color:grey; width: auto;">
+							<img src="img/bedpillowblue.jpg" alt="bedpillow">
+						</div>
+					</div>
+					<div class="cart-item-description">
+						<h3>Bed Pillow</h3>
+
+						<p>color: <i>after school special</i></p>
+						<p>stuffing: <i>duck down</i></p>
+
+					</div>
+					<div>
+						qty: <input type="number" min="1" max="99" placeholder="1">
+					</div>
+					<div>
+						$XX.XX
+					</div>
+				</div> -->
+			</div>
+<!-- 			<div class="container">
 				<div class="grid-item">
 					<div class="product-pics" style="height: 50px;background-color:grey; width: auto;">
 						<img src="img/couchpillow.jpg" alt="couchpillow">
@@ -66,12 +73,12 @@
 
 				</div>
 				<div>
-					qty: <input type="number" min="1" max="99" text="1" placeholder="1">
+					qty: <input type="number" min="1" max="99" placeholder="1">
 				</div>
 				<div>
 					$XX.XX
 				</div>
-			</div>
+			</div> -->
 		</div>
 
 		<div class="container">
